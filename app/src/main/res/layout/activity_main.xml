@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_connection_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="使用时需要打开GPS开关并授予所有权限"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/barrier_settings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_file_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        android:text="使用时需要打开GPS开关并授予所有权限"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/barrier_settings"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_connection_info" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sw_receiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintHorizontal_bias="0"
+        android:checked="true"
+        android:text="Receive mode"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/tv_connection_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Device Id:"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/et_id"
+        app:layout_constraintStart_toStartOf="@id/sw_receiver"
+        app:layout_constraintTop_toBottomOf="@id/sw_receiver" />
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:inputType="number"
+        android:text="1"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_id"
+        app:layout_constraintStart_toEndOf="@id/tv_id" />
+
+    <TextView
+        android:id="@+id/tv_generate_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Storage capacity(M)："
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/et_generate_size"
+        app:layout_constraintStart_toEndOf="@id/tv_connection_info"
+        app:layout_constraintTop_toBottomOf="@id/tv_id" />
+
+
+    <EditText
+        android:id="@+id/et_generate_size"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:inputType="number"
+        android:text="1000"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_generate_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_generate_size" />
+
+    <TextView
+        android:id="@+id/tv_generate_interval"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Data arrival interval(S)："
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/et_generate_interval"
+        app:layout_constraintStart_toStartOf="@id/tv_generate_size"
+        app:layout_constraintTop_toBottomOf="@id/tv_generate_size" />
+
+
+    <EditText
+        android:id="@+id/et_generate_interval"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:inputType="numberDecimal"
+        android:text="2000"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_generate_interval"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_generate_interval" />
+
+    <TextView
+        android:id="@+id/tv_reliability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Reliability："
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/et_reliability"
+        app:layout_constraintStart_toStartOf="@id/tv_generate_interval"
+        app:layout_constraintTop_toBottomOf="@id/tv_generate_interval" />
+
+
+    <EditText
+        android:id="@+id/et_reliability"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:inputType="numberDecimal"
+        android:text="0.9"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_reliability"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_reliability" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_settings"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tv_id,et_id,tv_generate_size,et_generate_size,tv_generate_interval,et_generate_interval" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_reliability"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tv_reliability,et_reliability" />
+
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="sw_receiver,tv_id,et_id,tv_generate_size,et_generate_size,tv_generate_interval,et_generate_interval" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="tv_connection_info,tv_file_info,et_generate_interval,et_reliability" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:textSize="18sp"
+                android:text="Scheduling strategy："
+                android:textColor="#000000"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_device"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/tv_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp" />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

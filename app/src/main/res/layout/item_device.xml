@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/item_device_bg">
+
+    <View
+        android:id="@+id/vertical_line"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="#686A6A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ID: 1" />
+
+    <TextView
+        android:id="@+id/tv_online"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vertical_line"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="在线状态：在线" />
+
+    <View
+        android:id="@+id/horizontal_line_1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#686A6A"
+        app:layout_constraintTop_toBottomOf="@id/tv_id" />
+
+    <TextView
+        android:id="@+id/tv_start_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toStartOf="@id/vertical_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line_1"
+        tools:text="开始时间：2分" />
+
+    <TextView
+        android:id="@+id/tv_end_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vertical_line"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line_1"
+        tools:text="结束时间：2分" />
+
+    <View
+        android:id="@+id/horizontal_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#686A6A"
+        app:layout_constraintTop_toBottomOf="@id/tv_start_time" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line_2"
+        tools:text="持续时间：2分" />
+
+    <TextView
+        android:id="@+id/tv_send_speed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vertical_line"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line_2"
+        tools:text="发送速率：10M" />
+
+    <View
+        android:id="@+id/horizontal_line_3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#686A6A"
+        app:layout_constraintTop_toBottomOf="@id/tv_time" />
+
+    <TextView
+        android:id="@+id/tv_limited_size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toStartOf="@id/vertical_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line_3"
+        tools:text="限制大小：10M" />
+
+    <TextView
+        android:id="@+id/tv_real_size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vertical_line"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line_3"
+        tools:text="实际接收：10M" />
+
+    <View
+        android:id="@+id/horizontal_line_4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#686A6A"
+        app:layout_constraintTop_toBottomOf="@id/tv_limited_size" />
+
+    <TextView
+        android:id="@+id/tv_generate_speed"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toStartOf="@id/vertical_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line_4"
+        tools:text="数据生成速率：10M" />
+
+    <TextView
+        android:id="@+id/tv_total_size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vertical_line"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line_4"
+        tools:text="数据生成速率：10M" />
+
+    <View
+        android:id="@+id/horizontal_line_5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#686A6A"
+        app:layout_constraintTop_toBottomOf="@id/tv_generate_speed" />
+
+    <TextView
+        android:id="@+id/tv_main_size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toStartOf="@id/vertical_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line_5"
+        tools:text="主队列长度：10M" />
+
+    <TextView
+        android:id="@+id/tv_backup_size"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vertical_line"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line_5"
+        tools:text="备份队列长度：10M" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
